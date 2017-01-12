@@ -5,29 +5,27 @@ var casper = require('casper').create({
 	waitTimeout: 200000
 })
 
-casper.start('https://www.ic.gc.ca/auth/app/scr/ic/idm/login?lang=eng')
+casper.start('https://www.ic.gc.ca/auth/app/scr/ic/idm/login?lang=eng&goto=https://www.nuans.com/auth/app/scr/corp/nuans/member/order.html')
 casper.then(function () {
+	this.waitForSelector('button#gckeyBtn')
 	this.echo('First Page: ' + this.getTitle())
 })
-casper.thenOpen('https://clegc-gckey.gc.ca/j/eng/l', function () {
-	this.waitForSelector('form#login')
-})
-casper.then([{
-	'nuansUser': 'LawScout',
-	'nuansPassword': 'h3kf9qQNr4pHy8cr'
-}, function () {
-	this.fill('form#login', {
-		'token1': nuansUser,
-		'token2': nuansPassword
-	}, true)
-}])
-casper.thenOpen('https://www.nuans.com/auth/app/scr/corp/nuans/member/order.html', function () {
-	this.waitForSelector('button#gckeyBtn')
-	this.echo('wait for button#gckeyBtn')
-})
 casper.thenClick('button#gckeyBtn', function () {
-	this.waitForSelector('input#nxt')
-	this.echo('wait for input#nxt')
+	this.waitForSelector('form#login')
+	this.echo('wait for form#login')
 })
-
+casper.then(function() {
+	this.fill('form#login', {
+		'token1': 'LawScout',
+		'token2': 'h3kf9qQNr4pHy8cr'
+	}, true)
+})
+casper.then(function () {
+	this.waitForSelector('input#continue')
+	this.echo('wait for input#continue')
+})
+casper.thenClick('input#continue', function() {
+	this.waitForSelector('input#nxt')
+	this.echo('wait for input#nxt ' + this.getTitle())
+})
 casper.run()
