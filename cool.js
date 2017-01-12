@@ -1,6 +1,7 @@
 "use strict";
 var page = require('webpage').create();
 
+page.settings.userAgent="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
 page.open('https://www.ic.gc.ca/auth/app/scr/ic/idm/login?lang=eng&goto=https://www.nuans.com/auth/app/scr/corp/nuans/member/order.html', function(status) {
 	console.log(status)
 	// console.log(page.injectJs('https://www.ic.gc.ca/eic/home.nsf/js/webtrends.js'))
