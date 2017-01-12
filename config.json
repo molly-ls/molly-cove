@@ -2,9 +2,9 @@
   /* Same as: --ignore-ssl-errors=true */
   "ignoreSslErrors": true,
 
-  "proxy": "proxy-23-21-132-4.proximo.io:80",
+  "proxy": "52.6.13.167:9293",
 
-  "proxyAuth": "proxy:f79d1ac2e616-49c1-93ac-cb4d647136d7",
+  "proxyAuth": "quotaguard8090:788e93debd98",
 
   "proxyType": "none",
 
