@@ -2,7 +2,7 @@
   /* Same as: --ignore-ssl-errors=true */
   "ignoreSslErrors": true,
 
-  "proxy": "52.6.13.167:9293",
+  "proxy": "167.114.167.221:3128",
 
   "proxyAuth": "quotaguard8090:788e93debd98",
 
