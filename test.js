@@ -30,3 +30,11 @@ casper.then(function () {
 // 	this.echo('wait for input#nxt ' + this.getTitle())
 // })
 casper.run()
+
+
+// curl -v --url http://testing-gounds.herokuapp.com/auto/what
+// curl -v -U proxy:f79d1ac2e616-49c1-93ac-cb4d647136d7 -x proxy-23-21-132-4.proximo.io:80  --url http://testing-gounds.herokuapp.com/auto/what
+// http://proxy:f79d1ac2e616-49c1-93ac-cb4d647136d7@proxy-23-21-132-4.proximo.io:80
+
+// http://elementalselenium.com/tips/38-headless
+// Acquire::http::proxy "http://proxy:f79d1ac2e616-49c1-93ac-cb4d647136d7@proxy-23-21-132-4.proximo.io:80";
