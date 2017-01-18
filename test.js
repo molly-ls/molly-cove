@@ -37,4 +37,10 @@ casper.run()
 // http://proxy:f79d1ac2e616-49c1-93ac-cb4d647136d7@proxy-23-21-132-4.proximo.io:80
 
 // http://elementalselenium.com/tips/38-headless
+// Xvfb :99 &
+// export DISPLAY=:99
 // Acquire::http::proxy "http://proxy:f79d1ac2e616-49c1-93ac-cb4d647136d7@proxy-23-21-132-4.proximo.io:80";
+
+
+
+// http://www.ic.gc.ca/auth/app/scr/ic/idm/login?lang=eng&goto=http://www.nuans.com/auth/app/scr/corp/nuans/member/order.html
